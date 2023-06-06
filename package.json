@@ -1,0 +1,23 @@
+{
+  "name": "appleofficewebsite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.2.20",
+    "less-loader": "^11.1.2",
+    "save-dev": "^0.0.1-security",
+    "style-loader": "^3.3.3",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "less": "^4.1.3",
+    "vite": "^4.3.9"
+  }
+}
