@@ -57,11 +57,11 @@ export const hoverInfos = [
     navigationName: '选购Mac',
     products: [
       {
-        title: '查找零售店',
+        title: '选购Mac',
         link: '#',
         size: 's'
       }, {
-        title: '订单状态',
+        title: 'Mac配件',
         link: '#',
         size: 's'
       }, {
@@ -79,15 +79,35 @@ export const hoverInfos = [
     navigationName: 'Mac相关',
     products: [
       {
-        title: '认证的翻新产品',
+        title: 'Mac 支持',
+        link: '#',
+        size: 's'
+      }, {
+        title: 'MacOS Ventura',
+        link: '#',
+        size: 's'
+      }, {
+        title: 'Final Cut Pro',
+        link: '#',
+        size: 's'
+      }, {
+        title: 'Logic Pro',
+        link: '#',
+        size: 's'
+      }, {
+        title: '连接互通',
+        link: '#',
+        size: 's'
+      }, {
+        title: 'iCloud',
+        link: '#',
+        size: 's'
+      }, {
+        title: 'Mac 商务应用',
         link: '#',
         size: 's'
       }, {
         title: '教育',
-        link: '#',
-        size: 's'
-      }, {
-        title: '商务',
         link: '#',
         size: 's'
       }

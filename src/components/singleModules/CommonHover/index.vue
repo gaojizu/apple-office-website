@@ -12,7 +12,15 @@
       <div class="f-item" v-for="(item, index) in hoverInfos">
         <h6>{{ item.navigationName }}</h6>
         <div class="f-item-content">
-          <h3 v-for="(it, d) in item.products">{{ it.title }}</h3>
+          <template v-for="(it, d) in item.products">
+            <div v-if="it.size === 'l'">
+              <h2>{{ it.title }}</h2>
+            </div>
+            <div v-else>
+              <h6>{{ it.title }}</h6>
+            </div>
+          </template>
+
         </div>
       </div>
     </div>
@@ -20,31 +28,33 @@
 </template>
 <script setup>
 const props = defineProps({
-  hoverInfos : Array
+  hoverInfos: Array
 })
 </script>
 <style lang="less" scoped>
-  .f-content {
+.f-content {
   display: flex;
   flex-direction: row;
+
   .f-item {
     margin-top: 40px;
     margin-right: 30px;
+
     h6 {
       color: gray;
       margin: 0;
       padding: 0;
     }
+
     .f-item-content {
       margin-top: 10px;
-      h3 {
+
+      h2,h6 {
         color: #fff;
         cursor: pointer;
         margin-top: 10px;
         padding: 0;
-        
       }
     }
   }
-}
-</style>
+}</style>
