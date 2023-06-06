@@ -8,8 +8,11 @@
 -->
 <template>
   <div class="container">
+    <!-- 广告模块 -->
     <BaseAdver />
+    <!-- 菜单模块 -->
     <Menu />
+    <!-- 页面内容展示区 -->
   </div>
 </template>
 <script setup>

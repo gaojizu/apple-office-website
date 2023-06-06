@@ -6,6 +6,11 @@
  * @Date: 2023-06-06 10:49:04
  * @FilePath: /apple-office-website/src/utils/constant.js
  */
+import {
+  HoverStoreContent,
+  HoverMacContent
+} from './components'
+
 // 菜单信息
 export const menuLists = [
   {
@@ -26,7 +31,7 @@ export const menuLists = [
     title: '商店',
     icon: '',
     link: '#',
-    hoverComponent: '',
+    hoverComponent: HoverStoreContent,
     clickComponent: '',
   },
   {
@@ -36,7 +41,7 @@ export const menuLists = [
     title: 'Mac',
     icon: '',
     link: '#',
-    hoverComponent: '',
+    hoverComponent: HoverMacContent,
     clickComponent: '',
   }, {
     id: 3,
@@ -130,80 +135,4 @@ export const menuLists = [
     clickComponent: '',
   }
 ]
-// 菜单鼠标放置提示蒙层数据
-export const productsHoverList = [
-  {
-    store: [
-      {
-        navigationName: '选购',
-        products: [
-          {
-            title: '选购新品',
-            link: '#',
-            size: 'l'
-          }, {
-            title: 'Mac',
-            link: '#',
-            size: 'l'
-          }, {
-            title: 'iPad',
-            link: '#',
-            size: 'l'
-          }, {
-            title: 'iPhone',
-            link: '#',
-            size: 'l'
-          }, {
-            title: 'Apple Watch',
-            link: '#',
-            size: 'l'
-          }, {
-            title: '配件',
-            link: '#',
-            size: 'l'
-          },
-        ]
-      },
-      {
-        navigationName: '快速链接',
-        products: [
-          {
-            title: '查找零售店',
-            link: '#',
-            size: 's'
-          }, {
-            title: '订单状态',
-            link: '#',
-            size: 's'
-          }, {
-            title: 'Apple Trade in 换购计划',
-            link: '#',
-            size: 's'
-          }, {
-            title: '分期付款',
-            link: '#',
-            size: 's'
-          }
-        ]
-      },
-      {
-        navigationName: '专属商店选购',
-        products: [
-          {
-            title: '认证的翻新产品',
-            link: '#',
-            size: 's'
-          }, {
-            title: '教育',
-            link: '#',
-            size: 's'
-          }, {
-            title: '商务',
-            link: '#',
-            size: 's'
-          }
-        ]
-      }
-    ]
-  }
-]
+

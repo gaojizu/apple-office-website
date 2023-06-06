@@ -7,22 +7,44 @@
  * @FilePath: /apple-office-website/src/components/Menu/index.vue
 -->
 <template>
-  <div class="a-menu">
-    <a-space :size="size">
-      <span
-        v-for="(item, index) in menuLists"
-        :key="index"
-        :style="{ fontSize: item.size ? item.size : 'xx-small' }"
-        class="a-single-element"
-        >{{ item.title ? item.title : item.icon }}</span
-      >
-    </a-space>
+  <div class="main">
+    <!-- 菜单 -->
+    <div class="a-menu">
+      <a-space :size="size">
+        <span
+          v-for="(item, index) in menuLists"
+          @mouseover="handleHover(item)"
+          @mouseleave="handleLeave"
+          :key="item.id"
+          :style="{ fontSize: item.size ? item.size : 'xx-small' }"
+          class="a-single-element"
+          >{{ item.title ? item.title : item.icon }}</span
+        >
+      </a-space>
+    </div>
+    <!-- hover蒙层 -->
+    <div class="a-hover-mc">
+      <BaseHover v-show="isShowHover" :currComponent="currComponent" />
+    </div>
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
 import { menuLists } from "../../utils/constant";
-const size = ref(38);
+import BaseHover from "../BaseHover/index.vue";
+const size = ref(50);
+const isShowHover = ref(false);
+const currComponent = ref({});
+
+const handleHover = (item) => {
+  console.log(`🚀 - file: index.vue:41 - handleHover - item:`, item);
+
+  currComponent.value = item.hoverComponent;
+  isShowHover.value = true;
+};
+const handleLeave = () => {
+  isShowHover.value = false;
+};
 </script>
 <style lang="less" scoped>
 .a-menu {
@@ -35,6 +57,12 @@ const size = ref(38);
   font-style: normal;
   .a-single-element {
     cursor: pointer;
+    position: relative;
   }
+}
+.a-hover-mc {
+  transition: all 1s;
+  top: 0;
+  left: 0;
 }
 </style>
