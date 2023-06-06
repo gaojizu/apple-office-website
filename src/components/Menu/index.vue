@@ -11,20 +11,26 @@
     <!-- 菜单 -->
     <div class="a-menu">
       <a-space :size="size">
-        <span
+        <div
           v-for="(item, index) in menuLists"
           @mouseover="handleHover(item)"
           @mouseleave="handleLeave"
           :key="item.id"
           :style="{ fontSize: item.size ? item.size : 'xx-small' }"
           class="a-single-element"
-          >{{ item.title ? item.title : item.icon }}</span
         >
+          <span>{{ item.title ? item.title : item.icon }}</span>
+        </div>
       </a-space>
     </div>
     <!-- hover蒙层 -->
-    <div class="a-hover-mc">
-      <BaseHover v-show="isShowHover" :currComponent="currComponent" />
+    <div
+      class="a-hover-mc"
+      v-show="isShowHover"
+      @mouseover="stayHover()"
+      @mouseleave="styleLeave()"
+    >
+      <BaseHover :currComponent="currComponent" />
     </div>
   </div>
 </template>
@@ -32,15 +38,21 @@
 import { ref } from "vue";
 import { menuLists } from "../../utils/constant";
 import BaseHover from "../BaseHover/index.vue";
+
 const size = ref(50);
 const isShowHover = ref(false);
 const currComponent = ref({});
 
 const handleHover = (item) => {
   console.log(`🚀 - file: index.vue:41 - handleHover - item:`, item);
-
   currComponent.value = item.hoverComponent;
   isShowHover.value = true;
+};
+const stayHover = () => {
+  isShowHover.value = true;
+};
+const styleLeave = () => {
+  isShowHover.value = false;
 };
 const handleLeave = () => {
   isShowHover.value = false;
@@ -62,7 +74,5 @@ const handleLeave = () => {
 }
 .a-hover-mc {
   transition: all 1s;
-  top: 0;
-  left: 0;
 }
 </style>

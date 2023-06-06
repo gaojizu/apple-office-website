@@ -8,11 +8,10 @@
 -->
 <template>
   <div>
-    <CommonHover :hoverInfos="hoverInfos"/>
+    <CommonHover :hoverInfos="hoverInfos" />
   </div>
 </template>
 <script setup>
 import { hoverInfos } from "./constant";
 </script>
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>
