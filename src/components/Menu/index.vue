@@ -11,6 +11,14 @@
     <!-- 菜单 -->
     <div class="a-menu">
       <a-space :size="size">
+      <!-- 苹果logo -->
+        <div
+          style="font-size: x-large;"
+          class="a-single-element"
+        >
+          <span>{{ '' }}</span>
+        </div>
+        <!-- 菜单 -->
         <div
           v-for="(item, index) in menuLists"
           @mouseover="handleHover(item)"
@@ -20,6 +28,20 @@
           class="a-single-element"
         >
           <span>{{ item.title ? item.title : item.icon }}</span>
+        </div>
+        <!-- 搜索 -->
+        <div
+          style="font-size:  large;"
+          class="a-single-element"
+        >
+          <span>{{ '🔍' }}</span>
+        </div>
+        <!-- 购物车 -->
+        <div
+          style="font-size: large;"
+          class="a-single-element"
+        >
+          <span>{{ '🛒' }}</span>
         </div>
       </a-space>
     </div>

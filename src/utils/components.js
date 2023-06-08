@@ -6,15 +6,17 @@
  * @Date: 2023-06-06 17:12:25
  * @FilePath: /apple-office-website/src/utils/components.js
  */
-import {defineAsyncComponent} from 'vue'
+import { defineAsyncComponent } from 'vue'
 
 // 商店hover组件 
-const HoverStoreContent = defineAsyncComponent(()=> import('../components/singleModules/Store/HoverContent/index.vue'))
+const HoverStoreContent = defineAsyncComponent(() => import('../components/singleModules/Store/HoverContent/index.vue'))
 // Mac hover组件
-const HoverMacContent = defineAsyncComponent(()=> import('../components/singleModules/Mac/HoverContent/index.vue'))
-
+const HoverMacContent = defineAsyncComponent(() => import('../components/singleModules/Mac/HoverContent/index.vue'))
+// iPad hover组件
+const HoverIpadContent = defineAsyncComponent(() => import('../components/singleModules/iPad/HoverContent/index.vue'))
 
 export {
   HoverStoreContent,
-  HoverMacContent
+  HoverMacContent,
+  HoverIpadContent
 }

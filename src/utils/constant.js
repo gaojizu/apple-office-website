@@ -8,22 +8,12 @@
  */
 import {
   HoverStoreContent,
-  HoverMacContent
+  HoverMacContent,
+  HoverIpadContent
 } from './components'
 
 // 菜单信息
 export const menuLists = [
-  {
-    id: 0,
-    isHover: false,
-    isClick: true,
-    title: '',
-    size: 'x-large',
-    icon: '',
-    link: '#',
-    hoverComponent: '',
-    clickComponent: '',
-  },
   {
     id: 1,
     isHover: true,
@@ -50,7 +40,7 @@ export const menuLists = [
     title: 'iPad',
     icon: '',
     link: '#',
-    hoverComponent: '',
+    hoverComponent: HoverIpadContent,
     clickComponent: '',
   }, {
     id: 4,
@@ -112,24 +102,6 @@ export const menuLists = [
     isClick: true,
     title: '技术支持',
     icon: '',
-    link: '#',
-    hoverComponent: '',
-    clickComponent: '',
-  }, {
-    id: 11,
-    isHover: false,
-    isClick: true,
-    title: '',
-    icon: '🔍',
-    link: '#',
-    hoverComponent: '',
-    clickComponent: '',
-  }, {
-    id: 12,
-    isHover: false,
-    isClick: true,
-    title: '',
-    icon: '🛒',
     link: '#',
     hoverComponent: '',
     clickComponent: '',
