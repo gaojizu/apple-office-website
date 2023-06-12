@@ -20,7 +20,6 @@
               <h6>{{ it.title }}</h6>
             </div>
           </template>
-
         </div>
       </div>
     </div>

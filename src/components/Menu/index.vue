@@ -54,6 +54,9 @@
     >
       <BaseHover :currComponent="currComponent" />
     </div>
+    <!-- click 模块 --> 
+    <div class="a-click-mc" v-show="isShowClick">
+    </div>
   </div>
 </template>
 <script setup>
@@ -63,6 +66,7 @@ import BaseHover from "../BaseHover/index.vue";
 
 const size = ref(50);
 const isShowHover = ref(false);
+const isShowClick = ref(true);
 const currComponent = ref({});
 
 const handleHover = (item) => {
